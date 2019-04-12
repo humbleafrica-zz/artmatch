@@ -1,9 +1,14 @@
 from django.shortcuts import render
-
 from django.http import HttpResponse
+from models import Crafts
 
 def index(request):
-    return HttpResponse("<h1> this is this is the home page</h1>")
+    all_crafts =Crafts.objects.all()
+    html=''
+    for craft in all_crafts:
+        url='/craft/'+ str(craft.id)+ '/'
+        html+='<a href="'+url+'">craft.work_title</a><br/>'
+    return HttpResponse(html)
     
 def detail(request):
-   return HttpResponse("<h2>Details for Craft id: "+ str(id) + "</h2>")
+   return HttpResponse("<h2>Details for Craft ID: "+ str(id) + "</h2>")

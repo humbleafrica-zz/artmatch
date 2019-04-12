@@ -17,6 +17,6 @@ class Crafts(models.Model):
         
     #name of art work
 class Song_MasterPiece(models.Model):
-    collection = models.ForeignKey(Crafts, on_delete=models.CASCADE)
+    collections = models.ForeignKey(Crafts, on_delete=models.CASCADE)
     file_type = models.CharField(max_length=50)
     work_title=models.CharField(max_length=250)
