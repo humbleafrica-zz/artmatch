@@ -1,0 +1,12 @@
+<img src="{{ Craft.work_Image }}"/>
+
+<h1>{{ Craft.craft_Title }}</h1>
+<h3>{{ Craft.craft_artist }}</h3>
+
+<ul>
+    {% for Work in Craft.collections_set.all %}
+    <li>
+        {{ work.work_title }} - {{ work.work_media }}
+    </li>
+    {% endfor%}
+</ul>

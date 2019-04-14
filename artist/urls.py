@@ -5,7 +5,7 @@ urlpatterns = [
     # /artist/
     url(r'^$', views.index, name='index'),
     
-    # /match all integers
-    url(r'^(?P<craft_id>[0-9]+)/$',views.detail, name='detail'),
+    # /work/work_id
+    url(r'^(?P<Work>[0-9]+)/$',views.detail, name='detail'),
     
 ]

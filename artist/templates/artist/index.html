@@ -1,7 +1,14 @@
+{% if works %}
+<h3>Available Crafts</h3> 
 <ul>
-    {% for craft in all_crafts %}
+    {% for works in Craft %}
     <li>
-        <a href="/crafts/{{ craft.id }}">Craft Title goes here</a>
+        <a href="{% url 'detail' work.id %}">{{ work.work_title}}</a>
     </li>
-    {% end for %}
+    {% endfor %}
 </ul>
+{% else %}
+<h3>
+    There are no Crafts yet..
+</h3>
+{% endif %}

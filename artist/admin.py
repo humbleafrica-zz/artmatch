@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Crafts
+from .models import Craft, Work
 # Register your models here.
 
-admin.site.register(Crafts)
+admin.site.register(Craft)
+admin.site.register(Work)

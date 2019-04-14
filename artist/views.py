@@ -1,17 +1,17 @@
+from django.http import Http404
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
-from models import Crafts
+from models import Craft
 
 def index(request):
     #pull all crafts objects
-    all_crafts =Crafts.objects.all()
-    template = loader.get_template('artist/index.html')
-    context = {
-        'all_crafts':all_crafts,
-    }
+    Crafts =Craft.objects.all()
+    context = {'Craft':Craft,}
+    return render(request, 'artist/index.html', {'Craft':Craft})
     
-    return HttpResponse(template.render(context,request))
-    
-def detail(request):
-   return HttpResponse("<h2>Details for Craft ID: "+ str(id) + "</h2>")
+#http 404 error
+def detail(request, work_id):
+    try:
+        work = Craft.objects.get(id=work_id)
+    except Craft.DoesNotExist:
+        raise Http404("Craft does not Exist")
+    return render(request, 'artist/detail.html', {'Craft': Craft})
