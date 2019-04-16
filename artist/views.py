@@ -1,5 +1,4 @@
-from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from models import Craft
 
 def index(request):
@@ -10,8 +9,5 @@ def index(request):
     
 #http 404 error
 def detail(request, work_id):
-    try:
-        work = Craft.objects.get(id=work_id)
-    except Craft.DoesNotExist:
-        raise Http404("Craft does not Exist")
+    artist = get_object_or_404(Artist, id=work_id)
     return render(request, 'artist/detail.html', {'Craft': Craft})
