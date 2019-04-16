@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from models import Craft
+from models import Work
 
 def index(request):
     #pull all crafts objects
@@ -9,5 +10,5 @@ def index(request):
     
 #http 404 error
 def detail(request, work_id):
-    artist = get_object_or_404(Artist, id=work_id)
-    return render(request, 'artist/detail.html', {'Craft': Craft})
+    Work = get_object_or_404(Work, id=work_id)
+    return render(request, 'artist/detail.html', {'Work': Work})

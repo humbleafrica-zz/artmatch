@@ -1,12 +1,22 @@
-<img src="{{ Craft.work_Image }}"/>
+<img src="{{ Craft.work_Image }}" />
 
-<h1>{{ Craft.craft_Title }}</h1>
+<h1>{{ Craft.craft_title }}</h1>
 <h3>{{ Craft.craft_artist }}</h3>
 
-<ul>
-    {% for works in Craft.works_set.all %}
-    <li>
-        {{ work.work_title }} - {{ work.work_media }}
-    </li>
-    {% endfor%}
-</ul>
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="{% url 'artist:favorite' work.id %}" method="post">
+    {% csrf_token %} {% for works in Craft %}
+    <input type="radio" id="work{{forloop.counter}}" name="work" value="{{work_id}}" /> {% endfor %}
+    <label for="work{{forloop.counter}}">
+        {{Work.work_title}}
+        {% if error_message %}
+        <p><strong>{{ work.isfavorite }}</strong></p>
+        
+        {% endif %}
+    </label>
+    <br/>
+    <input type="submit" value="Favorite" />
+</form>

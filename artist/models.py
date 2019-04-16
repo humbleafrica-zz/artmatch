@@ -14,7 +14,7 @@ class Craft(models.Model):
     
 #name of art work
 class Work(models.Model):
-    work = models.ForeignKey(Craft, on_delete=models.CASCADE)
+    work_id = models.ForeignKey(Craft, on_delete=models.CASCADE)
     work_media = models.CharField(max_length=250)
     work_title = models.CharField(max_length=250)
     is_favorite = models.BooleanField(default=False)
