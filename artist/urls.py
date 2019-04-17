@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     
     # /work/work_id
-    url(r'^(?P<work_id>[0-9]+)/$',views.detail, name='detail'),
+    url(r'^',views.detail, name='detail'),
     
     # /work/work_id/favorite
     #url(r'^(?P<work_id>[0-9]+)/favorite/$',views.favorite, name='favorite'),
