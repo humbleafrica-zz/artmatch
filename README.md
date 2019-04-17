@@ -64,13 +64,13 @@ It will qualify the following categories in the assignment brief
         
 ### *Sign Up and Artist Profiles* ###
      - Sign up will include Artists profiles where artists
-     - Upload their work to looked at to be considered by other artists
+     - Upload their work to be considered by other artists
      - Their work can be voted on by fellow artists
          
 ### *Bug Requests* ###
      - Artists can also post bug resolution requests
      - All artists having the same issue can click on a tag to signal 
-        the instance of the same issue
+     the instance of the same issue
             
 ### *Feature Requests* ###
      - Artists can request a feature to be added to the page at a minimum cost of £3.

@@ -1,3 +1,23 @@
-body{
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'ONEDAY Bold', Arial, sans-serif;
+}
+
+body {
     background: white url('images/match.png');
+}
+
+@font-face {
+    font-family: "ONEDAY Bold";
+    src: url("/static/artist/fonts/ONEDAY/ONEDAY.eot");
+    src: url("/static/artist/fonts/ONEDAY/ONEDAY.woff") format("woff"),
+    url("/static/artist/fonts/ONEDAY/ONEDAY.otf") format("opentype"),
+    url("/static/artist/fonts/ONEDAY/ONEDAY.svg#filename") format("svg");
+}
+
+.navbar-brand {
+    
+    font-weight: normal;
+    font-style: normal;
 }
