@@ -16,4 +16,10 @@ def favorite(request, craftid):
     craft = get_object_or_404(Craft, pk=craftid)
     select_work.is_favorite =True
     select_work.save()
-    return render(request, 'music/detail.html', {'craft': craft})
+    return render(request, 'artist/detail.html', {'craft': craft})
+    
+def bugs(request):
+    return render(request, 'artist/bugs.html')
+    
+def features(request):
+    return render(request, 'artist/features.html')

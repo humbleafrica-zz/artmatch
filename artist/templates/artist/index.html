@@ -1,9 +1,10 @@
 {% extends 'artist/base.html' %} {% block body %} {% if Crafts %}
+{% block title %} Crafts {% endblock %}
 <h3>Available Crafts</h3>
 <ul>
     {% for work in Crafts %}
     <li>
-        <a href=" url 'detail' craftid">{{ work.work_title }}</a>
+        <a href=" url 'detail' craftid">{{ Work.work_title }}</a>
     </li>
     {% endfor %}
 </ul>

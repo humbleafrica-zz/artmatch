@@ -1,7 +1,6 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'ONEDAY Bold', Arial, sans-serif;
 }
 
 body {
@@ -17,7 +16,7 @@ body {
 }
 
 .navbar-brand {
-    
+    font-family: 'ONEDAY Bold', Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
 }

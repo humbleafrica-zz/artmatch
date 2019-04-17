@@ -8,7 +8,7 @@
 <p><strong>{{ error_message }}</strong></p>
 {% endif %}
 
-<form action="{% url 'favorite' craftid %}" method="post">
+<form action="{'favorite' craftid}" method="post">
     {% csrf_token %} {% for works in Craft %}
     <input type="radio" id="work{{forloop.counter}}" name="work" value="{{craftid}}" /> {% endfor %}
     <label for="work{{forloop.counter}}">
