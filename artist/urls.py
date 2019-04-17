@@ -7,10 +7,10 @@ urlpatterns = [
     # /artist/
     url(r'^$', views.index, name='index'),
     
-    # /work/work_id
-    url(r'^',views.detail, name='detail'),
+    # /artist/craftid
+    url(r'^(?P<craftid>[0-9]+)/$', views.detail, name='detail'),
     
-    # /work/work_id/favorite
-    #url(r'^(?P<work_id>[0-9]+)/favorite/$',views.favorite, name='favorite'),
-    
+    # /artist/craftid/favorite
+    url(r'^(?P<craftid>[0-9]+)/favorite/$', views.detail, name='favorite'),
+
 ]

@@ -1,9 +1,9 @@
-{% if Work %}
+{% if Crafts %}
 <h3>Available Crafts</h3> 
 <ul>
-    {% for Work in Craft %}
+    {% for work in Crafts %}
     <li>
-        <a href="{% url 'artist/detail' work_id %}">{{ Work.work_title }}</a>
+        <a href="{% url 'artist/detail' craftid %}">{{ work.work_title }}</a>
     </li>
     {% endfor %}
 </ul>
