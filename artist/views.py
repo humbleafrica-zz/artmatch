@@ -14,14 +14,6 @@ def detail(request, craftid):
 
 def favorite(request, craftid):
     craft = get_object_or_404(Craft, pk=craftid)
-    try:
-        select_work = craft.work_set.get(pk=request.POST['work_title'])
-        except (KeyError, Work.DoesNotExist):
-            return render(request,'artist/detail.html',{
-                'craft':craft,
-                'error_message': "You did not select a valid Art Work",
-            })
-        else:
-            select_work.is_favorite =True
-            select_work.save()
-            return render(request, 'music/detail.html', {'craft': craft})
+    select_work.is_favorite =True
+    select_work.save()
+    return render(request, 'music/detail.html', {'craft': craft})
