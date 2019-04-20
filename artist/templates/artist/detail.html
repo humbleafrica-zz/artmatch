@@ -1,25 +1,16 @@
- {% block body %}
-<img src="{{ Craft.craft_logo }}" />
+{% extends 'artist/base.html' %} {% block body %} {% if Crafts %}
+{% block title %}Art Match - Details{% endblock %}
+<h3>Available Crafts</h3>
 
-<h1>{{ Craft.craft_title }}</h1>
-<h3>{{ Craft.artist }}</h3>
-
-{% if error_message %}
-<p><strong>{{ error_message }}</strong></p>
-{% endif %}
-
-<form action="{'favorite' craftid}" method="post">
-    {% csrf_token %} {% for works in Craft %}
-    <input type="radio" id="work{{forloop.counter}}" name="work" value="{{craftid}}" /> {% endfor %}
-    <label for="work{{forloop.counter}}">
-        {{Work.work_title}}
-        {% if work.isfavorite %}
-        <img src="https://fontawesome.com/icons/thumbs-up?style=solid"/>
-        <!--p><strong>{{ work.isfavorite }}</strong></p-->
-        {% endif %}
-    </label>
-    <br/>
-    <input type="submit" value="Favorite" />
-</form>
-{% endblock %}
-    
+<ul>
+    {% for Craft in object_list %}
+    <li>
+        <a href=" url 'detail' craftid">{{ Work.work_title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3>
+    There are no Crafts yet..
+</h3>
+{% endif %} {% endblock %}

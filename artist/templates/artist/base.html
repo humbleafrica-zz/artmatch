@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tahoma">
     <link rel="stylesheet" type="text/css" href="{% static 'artist/fonts/ONEDAY/ONEDAY.otf' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'artist/fonts/ONEDAY/ONEDAY.woff' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'artist/fonts/ONEDAY/ONEDAY.woff' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'artist/style.css' %}" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
@@ -23,7 +23,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="{% static 'artist/images/logo.png' %}" height="50" alt="Artist Match"> AM
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="artist/index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="detail.html"><i class="fas fa-paint-brush"></i> Crafts </a>
@@ -52,9 +52,11 @@
                     <a class="nav-link" href="register"><i class="fas fa-user-plus"></i> Register </a>
                 </li>
             </ul>
-        <
     </nav>
     {% block body %} {% endblock %}
 </body>
+<footer>
+    <h1></h1>
+</footer>
 
 </html>

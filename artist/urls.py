@@ -4,7 +4,7 @@ from . import views
 app_name = 'artist'
 
 urlpatterns = [
-    url('artist/templates/artist/index.html', views.IndexView),
-    url('artist/templates/artist/detail.html', views.DetailView),
+    url(r'^',views.IndexView.as_view(), name='index'),
+    url(r'^$', views.DetailView.as_view(), name='detail'),
 
 ]
