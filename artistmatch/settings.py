@@ -57,7 +57,7 @@ ROOT_URLCONF = 'artistmatch.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/artist/'],
+        'DIRS': ['templates/artist'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -22,7 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #set default for page artists
     url(r'^artist/', include('artist.urls')),
-    url(r'^detail/', include('artist.urls')),
-    url(r'^bugs/', include('artist.urls')),
-    url(r'^features/', include('artist.urls')),
+    
 ]

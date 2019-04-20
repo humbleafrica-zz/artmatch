@@ -1,8 +1,21 @@
 {% extends 'artist/base.html' %} {% block body %} {% if Crafts %}
-{% block title %} Crafts {% endblock %}
+{% block title %}Artist Match - AM{% endblock %}
 <h3>Available Crafts</h3>
 <ul>
     {% for work in Crafts %}
+    <li>
+        <a href=" url 'detail' craftid">{{ work.work_title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3>
+    There are no Crafts yet..
+</h3>
+{% endif %} {% endblock %}
+
+<ul>
+    {% for Craft in object_list %}
     <li>
         <a href=" url 'detail' craftid">{{ Work.work_title }}</a>
     </li>

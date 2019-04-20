@@ -1,25 +1,17 @@
-from django.shortcuts import render, get_object_or_404
-from models import Craft, Work
+from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .models import Craft, Work, Artist, ArtGroup, Member
 
-def index(request):
-    #pull all crafts objects
-    Crafts = Craft.objects.all()
-    context = {'Craft': Craft,}
-    return render(request, 'artist/index.html', {'Crafts':Crafts})
+class IndexView(generic.ListView):
+    templateName = 'artist/index.html'
     
-#http 404 error
-def detail(request, craftid):
-    craft = get_object_or_404(Craft, pk=craftid)
-    return render(request, 'artist/detail.html', {'craft': craft})
+    def get_queryset(self):
+        return Craft.objects.all()
 
-def favorite(request, craftid):
-    craft = get_object_or_404(Craft, pk=craftid)
-    #select_work.is_favorite =True
-    #select_work.save()
-    return render(request, 'artist/detail.html', {'craft': craft})
+class DetailView(generic.DetailView):
+    model=Craft
+    templateName = 'artist/detail.html'
     
-def bugs(request):
-    return render(request, 'artist/bugs.html')
-    
-def features(request):
-    return render(request, 'artist/features.html')
+class ArtistCreate(CreateView):
+    model = Artist
+    fields =['artist', 'craft_title', 'genre', 'craft_logo']

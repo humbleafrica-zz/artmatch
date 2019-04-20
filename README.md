@@ -35,11 +35,11 @@ Cloud9 > Preferences > Project Settings > Language Support.
 
 Django docs can be found at https://www.djangoproject.com/
 
-# Artists' Match Final Milestone Project #
+# Art Match Final Milestone Project #
 
 ## Project Requirements ##
     
-In this project I'll be building a website using the django/python interactive framework for a start-up project called *Artist Match*. The requirements of the project is shown below :
+In this project I'll be building a website using the django/python interactive framework for a start-up project called *Art Match*. The requirements of the project is shown below :
 
 Now that you’re a full-fledged web developer you’ve decided it’s probably time for you to start your very own cool, modern startup, offering the extremely awesome UnicornAttractor web app to your users. It’s really really amazing, but we don’t care about it at all in this project. The exciting thing is the business model that you’ve decided upon – you chose to offer the service and bug fixes for free, but ask for money from your users to develop additional features.
 The primary entity in the Issue Tracker is a ticket describing a user’s issue, and similar to Github’s issue tracker, you should allow users to create tickets, comment on tickets, and show the status of the ticket (e.g. ‘to do,’ ‘doing,’ or ‘done’). As mentioned, issues come in two varieties – ‘bugs’ (which you’ll fix for free, eventually), and ‘features’ which you’d only develop if you’re offered enough money. To help you prioritize your work, your users will be able to upvote bugs (signifying ‘I have this too’), and upvote feature requests (signifying ‘I want to have this too’). While upvoting bugs is free, to upvote a feature request, users would need to pay some money (with a minimum amount of your choice) to pay for your time in working on it. In turn, you promise always to spend at least 50% of your time working on developing the highest-paid feature.
@@ -49,9 +49,9 @@ If you want to have some more fun with this, feel free also to add pages describ
 And of course, as this project is going to be the lifeblood of your company, it’s essential that new developers that join the company will be able to get up and running as quickly as possible. Documentation is the best way to achieve this.
 
     
-As stated earlier I am building a site named *Artist Match (AM)*
+As stated earlier I am building a site named *Art Match (AM)*
     
-The idea is to match artists (both Audio and Visual).
+The idea is to match Art (both Audio and Visual).
 
 It will qualify the following categories in the assignment brief 
     
@@ -63,18 +63,18 @@ It will qualify the following categories in the assignment brief
     -- added extras -- could be an about page (time dependant)
         
 ### *Sign Up and Artist Profiles* ###
-     - Sign up will include Artists profiles where artists
-     - Upload their work to be considered by other artists
-     - Their work can be voted on by fellow artists
+     - Sign up will include Art profiles where Art
+     - Upload their work to be considered by other Art
+     - Their work can be voted on by fellow Art
          
 ### *Bug Requests* ###
-     - Artists can also post bug resolution requests
-     - All artists having the same issue can click on a tag to signal 
+     - Art can also post bug resolution requests
+     - All Art having the same issue can click on a tag to signal 
      the instance of the same issue
             
 ### *Feature Requests* ###
-     - Artists can request a feature to be added to the page at a minimum cost of £3.
-     - This can be voted on as well as funding topped up by other artists
+     - Art can request a feature to be added to the page at a minimum cost of £3.
+     - This can be voted on as well as funding topped up by other Art
      - The first feature request to cross the threshold of £250 will 
         trigger an immediate attention flag (moved to to-do list)
          
@@ -99,7 +99,7 @@ It will qualify the following categories in the assignment brief
      - Bug Requests
      - Feature Requests
      - Work With Artist (test feature)
-     - Sample Artists Work (Music test feature)
+     - Sample Art Work (Music test feature)
      - About
     
 ## TECHNOLOGY USED ##
