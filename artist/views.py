@@ -14,8 +14,8 @@ def detail(request, craftid):
 
 def favorite(request, craftid):
     craft = get_object_or_404(Craft, pk=craftid)
-    select_work.is_favorite =True
-    select_work.save()
+    #select_work.is_favorite =True
+    #select_work.save()
     return render(request, 'artist/detail.html', {'craft': craft})
     
 def bugs(request):
