@@ -15,3 +15,4 @@ class DetailView(generic.DetailView):
 class ArtistCreate(CreateView):
     model = Artist
     fields =['artist', 'craft_title', 'genre', 'craft_logo']
+    

@@ -17,10 +17,12 @@ Including another URLconf
 
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    
     #set default for page artists
-    url(r'^artist/', include('artist.urls')),
+    url(r'^artist/', include('artist.urls', 'django.contrib.auth.urls')),
     
 ]

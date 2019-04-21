@@ -35,17 +35,17 @@ class Artist(models.Model):
 class ArtGroup(models.Model):
     """A model of a artgroup"""
     name = models.CharField(max_length=200)
-    can_paint = models.BooleanField(default=False)
-    can_draw = models.BooleanField(default=False)
-    can_sing = models.BooleanField(default=False)
-    can_rap = models.BooleanField(default=False)
-    can_dance = models.BooleanField(default=False)
-    can_snap = models.BooleanField(default=False)
-    can_perform = models.BooleanField(default=False)
-    can_narrate = models.BooleanField(default=False)
-    can_playInst = models.BooleanField(default=False)
-    can_other = models.BooleanField(default=False)
-    artist = models.ForeignKey("Artist")
+    can_Paint = models.BooleanField(default=False)
+    can_Draw = models.BooleanField(default=False)
+    can_Sing = models.BooleanField(default=False)
+    can_RAP = models.BooleanField(default=False)
+    can_Dance = models.BooleanField(default=False)
+    can_Snap = models.BooleanField(default=False)
+    can_Perform = models.BooleanField(default=False)
+    can_Narrate = models.BooleanField(default=False)
+    can_Play_Inst = models.BooleanField(default=False)
+    can_Other = models.BooleanField(default=False)
+    Artist = models.ForeignKey("Artist")
 
 class Member(models.Model):
     """A model of a art group member."""
