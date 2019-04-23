@@ -1,7 +1,11 @@
-{% extends 'artist/base.html' %} {% block body %} {% if Crafts %}
-{% block title %}Art Match - A Better View{% endblock %}
+{% extends 'artist/base.html' %} 
 
-{% block content %}
+<!-- title-->
+{% block title %}Art Match - A Better View{% endblock %}
+<!-- content-->
+{% block content %} 
+
+{% if Crafts %}
 <!-- templates/registration/login.html -->
 <h2>Login</h2>
 <form method="post">
@@ -9,6 +13,4 @@
   {{ form.as_p }}
   <button type="submit">Login</button>
 </form>
-{% endblock %}
-
 {% endif %} {% endblock %}

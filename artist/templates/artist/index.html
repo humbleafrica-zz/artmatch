@@ -1,5 +1,12 @@
-{% extends 'artist/base.html' %} {% block body %} {% if Crafts %} {% block title %}Art Match - AM{% endblock %}
+{% extends 'artist/base.html' %}
+{% block title %}Art Match - AM{% endblock %}
+{% block content %} 
+{% if Crafts %} 
 <h1>Available Crafts</h1>
-{% if user.is_authenticated %} Hi {{ user.username }}! {% else %}
+{% if user.is_authenticated %} Hi {{ user.username }}! 
+{% else %}
 <p>You are not logged in</p>
-<a href="{% url 'login' %}">login</a> {% endif %} {% endblock %}
+<a href="{% url 'login' %}">login</a> 
+{% endif %} 
+{% endif %}
+{% endblock %}

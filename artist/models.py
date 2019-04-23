@@ -1,55 +1,27 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.conf import settings
+from django.utils import timezone
 from django.core.urlresolvers import reverse
 
-#type of art work and artist det
-class Craft(models.Model):
-    """A model of craft groupings"""
-    artist = models.ForeignKey("Artist")
-    craft_title = models.CharField(max_length=500)
-    craft_logo = models.CharField(max_length=1000)
-    
-    def get_absolute_url(self):
-        return reverse('artist: detail', kwargs={'pk':self.pk})
-    
-    def __str__(self):
-        return self.craft_title + ' - '+ self.artist
-    
-#name of art work
-class Work(models.Model):
-    """A model of artworks"""
-    work_id = models.ForeignKey(Craft, on_delete=models.CASCADE)
-    work_media = models.CharField(max_length=250)
-    work_title = models.CharField(max_length=250)
-
-    def __str__(self):
-        return self.work_title
-        
+"""Artists"""
 class Artist(models.Model):
-    """A model of a artist"""
-    Artist = models.CharField(max_length=250)
-    name = models.CharField(max_length=500)
-    crafts =models.TextField(max_length=5000)
-    genre =models.CharField(max_length=250)
-
-class ArtGroup(models.Model):
-    """A model of a artgroup"""
-    name = models.CharField(max_length=200)
-    can_Paint = models.BooleanField(default=False)
-    can_Draw = models.BooleanField(default=False)
-    can_Sing = models.BooleanField(default=False)
-    can_RAP = models.BooleanField(default=False)
-    can_Dance = models.BooleanField(default=False)
-    can_Snap = models.BooleanField(default=False)
-    can_Perform = models.BooleanField(default=False)
-    can_Narrate = models.BooleanField(default=False)
-    can_Play_Inst = models.BooleanField(default=False)
-    can_Other = models.BooleanField(default=False)
-    Artist = models.ForeignKey("Artist")
-
-class Member(models.Model):
-    """A model of a art group member."""
-    name = models.CharField("Member's name", max_length=200)
+    FName = models.CharField(max_length=250)
+    SName = models.CharField(max_length=250)
+    Stagename = models.CharField(max_length=250)
+    Band = models.CharField(max_length=250)
+    Genre =models.CharField(max_length=250)
+    
+    def voice_concern(self):
+        self.voted = True,
+        self.voted = False
+        
+    def __str__(self):
+        return self.Stagename
+    
+"""Art Group"""
+class GroupMember(models.Model):
+    Stagename = models.ForeignKey("Artist")
     talent = models.CharField(choices=(
             ('pr', "Painter"),
             ('mu', "Musician"),
@@ -72,4 +44,25 @@ class Member(models.Model):
         ),
         max_length=3
     )
-    group = models.ForeignKey("ArtGroup")
+    
+"""Art Catalogue/ Albums"""
+class Catalogue(models.Model):
+    Title = models.CharField(max_length=500)
+    Year = models.DateField(blank=True, null=True)
+    Stagename = models.ForeignKey("Artist")
+    Band = models.CharField(max_length=250)
+    Genre =models.CharField(max_length=250)
+    
+"""Bugs"""
+class Bug(models.Model):
+    What = models.CharField(max_length=2500)
+    Who = models.ForeignKey("Artist")
+    When = models.DateField(blank=True, null=True)
+    How = models.CharField(max_length=2500)
+    
+"""Bugs"""
+class Feature(models.Model):
+    What = models.CharField(max_length=2500)
+    Who = models.ForeignKey("Artist")
+    When = models.DateField(blank=True, null=True)
+    How = models.CharField(max_length=2500)
