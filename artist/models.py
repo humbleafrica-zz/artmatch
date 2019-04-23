@@ -4,7 +4,7 @@ from django.conf import settings
 from django.utils import timezone
 from django.core.urlresolvers import reverse
 
-"""Artists"""
+"""Artist"""
 class Artist(models.Model):
     FName = models.CharField(max_length=250)
     SName = models.CharField(max_length=250)
@@ -18,7 +18,18 @@ class Artist(models.Model):
         
     def __str__(self):
         return self.Stagename
-    
+
+"""Band"""
+class Band(models.Model):
+    Stagename = models.CharField(max_length=250)
+    Members = models.CharField(max_length=250)
+    def voice_concern(self):
+        self.voted = True,
+        self.voted = False
+        
+    def __str__(self):
+        return self.Stagename
+        
 """Art Group"""
 class GroupMember(models.Model):
     Stagename = models.ForeignKey("Artist")
@@ -52,6 +63,16 @@ class Catalogue(models.Model):
     Stagename = models.ForeignKey("Artist")
     Band = models.CharField(max_length=250)
     Genre =models.CharField(max_length=250)
+    #Album = models.FileField(upload_to='uploads/album')
+    
+"""Songs"""
+class Song(models.Model):
+    Title = models.CharField(max_length=500)
+    Year = models.DateField(blank=True, null=True)
+    Stagename = models.ForeignKey("Artist")
+    Band = models.ForeignKey("Band")
+    Genre =models.CharField(max_length=250)
+    #Upload = models.FileField(upload_to='uploads/instru')
     
 """Bugs"""
 class Bug(models.Model):
@@ -60,7 +81,7 @@ class Bug(models.Model):
     When = models.DateField(blank=True, null=True)
     How = models.CharField(max_length=2500)
     
-"""Bugs"""
+"""Features"""
 class Feature(models.Model):
     What = models.CharField(max_length=2500)
     Who = models.ForeignKey("Artist")
