@@ -68,7 +68,7 @@ It will qualify the following categories in the assignment brief
      - Their work can be voted on by fellow Art
          
 ### *Bug Requests* ###
-     - Art can also post bug resolution requests
+     - Artist can also post bug resolution requests
      - All Art having the same issue can click on a tag to signal 
      the instance of the same issue
             
