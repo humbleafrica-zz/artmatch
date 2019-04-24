@@ -94,52 +94,55 @@ It will qualify the following categories in the assignment brief
     A default homepage - Then extra menu options after login
     
 ### PAGES ###
-     - Index
-     - Works
-     - Bug Requests
-     - Feature Requests
-     - Work With Artist (test feature)
-     - Sample Art Work (Music test feature)
-     - About
+All pages below are .html unless specified
+
+- login
+- signup
+- base
+- bugs
+- features
+- index
+- about
     
 ## TECHNOLOGY USED ##
     
-    The technologies used in this project are HTML5, CSS, Python, Django JavaScript and Bootstrap.
+    The technologies used in this project are HTML5, CSS, Python, Django and Bootstrap.
         
-    django will allow me to build a website in smaller feature chunks with little effort. 
+    django was to allow me to build a website in smaller feature chunks with little effort.
         
-        HTML was use for the structuring of the pages
-        Bootstrap was use to ensure that the page appear a certain way on mobiles and another on tablets, desktops and laptops
-        Javascript was used mainly for showing the mapping on the home page
+    HTML was use for the structuring of the pages
+        Bootstrap was used to ensure that the page appear a certain way on mobiles and another on tablets, desktops and laptops
         CSS was used to beautify the page and make the structure stand out with the different colours.
     
     I used the following libraries || link to libraries
     
-    bootstrap || https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css 
-    fontawesome || https://use.fontawesome.com/releases/v5.5.0/css/all.css
-    css libraries || https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css
-    
-    https://git.heroku.com/artisth.git
-    
-    https://developers.google.com/maps
+    bootstrap ccs || https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+    minified Jquery || https://code.jquery.com/jquery-3.3.1.slim.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js
+    font awesome icons || https://fontawesome.com/icons?d=gallery
 
     
+  ## SUPPORT NETWORKS USED ##
+  
+  - Stackoverflow
+  - slack environment
+  - Youtube (Pretty Printed, Isaac Grey)
+  - https://tutorial.djangogirls.org/en/
+    
+    
 ## TESTING ##
+
+No a lot of testing was required working on this project. The IDE mostly flagged up issues with teh code and wouldn't run is the issue was severe.
+
+### Challenges ###
+
+I have not had a great exposure to Django. The exposure I've had from online tutorials shows its a versatile programming language but very confusing
+users will need several weeks of practice to become fully acquainted with the views, urls and models. i found it useful but complicated compared to PHP and MySQL
     
-    Mobile - I have accessed the site on my mobile as well as asked others in my household to access it on their mobiles and give me feedback. No errors were encounted.
+I had to restart the project due to  the view showing the same page over and over again in navigation. The error notifications were extremely unclear and unless you've 
+encounted the challenge before it was another few hours of debugging researching and hair pulling (if you had any left). The python code wouldn't work in C9IDe but would work fine
+locally.
     
-    Tablet - I have accessed the site on my ipad with no issues recognised.
-    
-    Desktop - I have accessed the site on my desktop. No errors were encounted. I also tested using the element inspector and showed the various
-    pages in the virtual devices build into my browser.
-    
-    Javascript - JavaScript was tested in console and jsfiddle (see image file in images photo of testing.jpg)
-    
-    The project appears well on a number of virtual screens therefore we can only rely on user feedback to make any improvements.
-    
-    The project was produced in cloud9 
-    
-    Updates have been saved to :
+
     
     https://github.com/humbleafrica/UCFDMP
     
@@ -174,3 +177,4 @@ https://docs.djangoproject.com/en/1.9/intro/tutorial01/
 
 Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE.
 To watch some training videos, visit http://www.youtube.com/user/c9ide
+https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ
