@@ -80,6 +80,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'USER': os.environ["C9_USER"],
+        'PASSWORD': '',
+        'HOST': os.environ["IP"],
+        'PORT': '3306',
     }
 }
 
@@ -121,7 +125,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = '/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 """LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'"""

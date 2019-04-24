@@ -119,6 +119,7 @@ It will qualify the following categories in the assignment brief
     fontawesome || https://use.fontawesome.com/releases/v5.5.0/css/all.css
     css libraries || https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css
     
+    https://git.heroku.com/artisth.git
     
     https://developers.google.com/maps
 

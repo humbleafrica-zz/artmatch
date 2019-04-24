@@ -24,7 +24,7 @@ urlpatterns = [
     url('admin/', admin.site.urls),
     
     # default home page for project
-    url('', include('artist.urls', 'django.contrib.auth.urls')),
+    url('', include('artist.urls')),
     
     url('artist', include('django.contrib.auth.urls')),
 ]

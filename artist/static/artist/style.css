@@ -3,16 +3,9 @@
     padding: 0px;
 }
 
-body {
-    background: white url('images/match.png')no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-    
+a:link {
+    text-decoration: none;
 }
-
-
 
 @font-face {
     font-family: "ONEDAY Bold";
@@ -22,8 +15,66 @@ body {
     url("/static/artist/fonts/ONEDAY/ONEDAY.svg#filename") format("svg");
 }
 
-.navbar-brand, #navbarNav {
+.navbar-brand,
+#navbarNav {
     font-family: 'ONEDAY Bold', Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
+}
+
+
+body {
+    background: white url('images/match.png')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+
+form {
+    margin: 120px auto;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input {
+    margin: 10px auto;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.startheader {
+    background: white;
+    border-radius: 5px;
+    padding: 2px;
+    font-family: 'ONEDAY Bold', Arial, sans-serif;
+
+    position: relative;
+}
+
+.wrapper {
+    margin: 20px 10px;
+    background: light-purple;
+    opacity: .8;
+    border-radius: 5px;
+    padding: 2px;
+
+    position: relative;
+}
+
+.register {
+    margin: 120px 10px;
+    background: white;
+    opacity: .8;
+    border-radius: 5px;
+    padding: 2px;
+
+    position: relative;
 }

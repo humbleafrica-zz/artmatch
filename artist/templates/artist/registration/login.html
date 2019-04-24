@@ -1,16 +1,29 @@
 {% extends 'artist/base.html' %} 
 
 <!-- title-->
-{% block title %}Art Match - A Better View{% endblock %}
+{% block title %} Login {% endblock %}
 <!-- content-->
 {% block content %} 
 
-{% if Crafts %}
-<!-- templates/registration/login.html -->
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
+{% if form.errors %}
+<p> something wrong</p>
+{% endif %}
+
+{% if next %}
+<p> you cant go there</p>
+
+{% endif %} 
+
+<form method="post" action="{% url 'login' %}">
+{% block login %}
+{{  form  }}
+{% endblock %}
+
+  Username <input type="text" name="username"/>
+  Password <input type="password" name="password"/>
+  
+  <input class="btn btn-success" type="submit" value="Submit"/>
+  <input type="hidden" name="next" value="{{ next }}"/>
 </form>
-{% endif %} {% endblock %}
+
+{% endblock %}
