@@ -52,10 +52,10 @@ input {
 
 .startheader {
     background: white;
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     padding: 2px;
     font-family: 'ONEDAY Bold', Arial, sans-serif;
-
     position: relative;
 }
 
@@ -65,16 +65,24 @@ input {
     opacity: .8;
     border-radius: 5px;
     padding: 2px;
-
     position: relative;
 }
 
-.register {
-    margin: 120px 10px;
+.register,
+.sign {
     background: white;
     opacity: .8;
     border-radius: 5px;
     padding: 2px;
-
     position: relative;
+    text-shadow: 2px 1px red;
+    max-width: 35%;
+}
+
+.register {
+    margin: 190px auto 0;
+}
+
+.sign {
+    margin: 10px auto;
 }

@@ -1,17 +1,25 @@
 {% extends 'artist/base.html' %} {% block title %} Welcome to Art | Match {% endblock %} {% block content %}
 
 <body>
-     <h1 class="startheader"> Share your gift </h1>
-     
+    <h1 class="startheader"> Share your gift </h1>
+
     <div class="wrapper">
-       
-       {% block login %}{% endblock %}
-        <div class="register col-4">
-            <a href="login.html"><h1>Join In</h1></a> 
+
+        {% block login %}{% endblock %}
+        <div class="col">
+            <div class="register col">
+                <a href="/login">
+                    <h1>Join In</h1>
+                </a>
+            </div>
+            <div class="sign col">
+                <a href="/signup">
+                    <h1>Sign In</h1>
+                </a>
+            </div>
+
         </div>
-        <div class="register col-4">
-         <a href="signup.html">   <h1>Sign In</h1></a> 
-        </div>
+
     </div>
 </body>
 
