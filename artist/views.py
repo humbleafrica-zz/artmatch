@@ -1,7 +1,7 @@
 from django.views import generic
 from django.shortcuts import render, render_to_response,  get_object_or_404, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Artist, GroupMember, Catalogue, Bug, Feature
+from .models import Artist, Craft, Catalogue, Bug, Feature
 from django.utils import timezone #importing the timezone model
 from datetime import datetime, timedelta # import to filter new recipes
 from django.http import HttpResponseRedirect
