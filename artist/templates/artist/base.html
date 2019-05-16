@@ -57,11 +57,11 @@
 </nav>
 
 <body>
-{% block logo %}
-<div class="logo">
-    <img src="{% static '/static/artist/images/logo.png' %}" height="100" alt="Art || Match">
-</div> {% endblock %}
-    {% block content %} {% block login %} {% endblock %} {% endblock %}
+
+    {% block content %} {% block logo %}
+    <div class="logo">
+        <img src="{% static '/static/artist/images/logo.png' %}" height="100" alt="Art || Match">
+    </div> {% endblock %}{% block login %} {% endblock %} {% endblock %}
 </body>
 <footer>
     <h1></h1>

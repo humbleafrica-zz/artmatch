@@ -10,13 +10,13 @@ from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm #import to use the builtin user creation form
 
 def index(request):
-    artist = Artist.Catalogue.filter().order_by('Year')
     return render(request, 'artist/index.html',{})
 
 def start(request):
     return render(request, 'artist/start.html',{})
 
 def catalogue(request):
+    catalogue = Artist.Catalogue.filter().order_by('Year')
     return render(request, 'artist/catalogue.html',{})
 
 def bugs(request):
