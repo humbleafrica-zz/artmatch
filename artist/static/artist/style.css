@@ -86,3 +86,15 @@ input {
 .sign {
     margin: 10px auto;
 }
+
+
+.logo{
+    margin:80px auto 10px;
+}
+form table{
+    text-align: left;
+    margin:20px;
+}
+input,text{
+    margin:5px 5px;
+}

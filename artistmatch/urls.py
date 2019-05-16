@@ -21,7 +21,7 @@ from django.conf.urls import include, url
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    url(r'^admin/$', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     # default home page for project
     url('', include('artist.urls')),
     

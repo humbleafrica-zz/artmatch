@@ -11,9 +11,14 @@
 {% endif %}
 
 <form class='site-form' method="post" action="{{ 'signup' }}">
-  {% csrf_token %} {{ form }}
-  <input class=" btn btn-success " type="submit " value="Submit"/>
-  <input type="hidden " name="next " value="{{ next }} "/>
+  <table>
+    {% csrf_token %} {{ form.as_table }}
+  </table>
+  <div class="col text-right">
+    <input class=" btn btn-success " type="submit " value="Submit" />
+
+  </div>
+  <input type="hidden" name="next" value="{{ next }}" />
 </form>
 
 {% endblock %}
