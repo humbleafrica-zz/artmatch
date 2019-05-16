@@ -134,7 +134,7 @@ I have relied heavily on the following networks in this project
 
 - Code Institutes Slack Environment
 
-- Youtube (Pretty Printed, Isaac Grey)
+- Youtube Channels (Pretty Printed, Isaac Grey)
 
 - https://tutorial.djangogirls.org/en/
 
@@ -179,9 +179,16 @@ The logo was created using four images from Unsplash using the keywords artist, 
 
 ### CONCLUSION
 
-The project idea is without a doubt phenomenal. The implementation could have been better researched in terms o fteh technology used. Inexperience with the chosen scripting language caused the project to not be completed. The same project could have been completed in PHP with much reasonable results.
+The project idea is without a doubt phenomenal. The implementation could have been better researched in terms o fteh technology used. Inexperience with the chosen scripting language caused the project to not be 
+completed. The same project could have been completed in PHP with much reasonable results.
 
-I have not had a great exposure to Django. The exposure I’ve had from sonline tutorials listed in my support section shows its a versatile programming language however very confusing and requires experience to create projects of teh magnitude envisioned. Users will need several weeks of practice to become fully acquainted with the views, urls and models. I found the django framework useful in many ways but complicated compared to PHP and MySQL. I had to restart the project due to the view showing the same page over and over again in navigation. The error notifications were extremely unclear and unless you’ve encounted the challenge before it was another few hours of debugging researching and hair pulling (if you had any left). The python code wouldn’t work in C9IDe but would work fine locally.
+I have not had a great exposure to Django. The exposure I’ve had from sonline tutorials listed in my support section shows its a versatile programming language however very confusing and requires experience to 
+create projects of teh magnitude envisioned. Users will need several weeks of practice to become fully acquainted with the views, urls and models. I found the django framework useful in many ways but complicated 
+compared to PHP and MySQL. I had to restart the project due to the view showing the same page over and over again in navigation. The error notifications were extremely unclear and unless you’ve encounted the challenge 
+before it was another few hours of debugging researching and hair pulling (if you had any left). The python code sometimes wouldn’t work in C9 IDE but would work fine locally. In all it was hairy experience but a learning curve.
+
+I have taken the possitive out of this and refined some of my PHP and limited the sourcecode for my website to 20% of the original content. In all I think Python and Django are great framework to work with however
+developers used to developing iwth PHP will appreciate the easy to debug aspect of PHP. Nonetheless I will attempt some of teh project on teh django website to polish my django knowledge for my up coming projects. 
 
 ### ACKNOWLEDGEMENTS
 

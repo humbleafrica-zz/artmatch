@@ -6,14 +6,14 @@ app_name = 'artist'
 
 urlpatterns = [
     #two views poiting to the same view with different names
-    url('', views.start, name='starter'),
-    
-    url('index', views.start, name='index'),
-    
-    url('artist', views.catalogue, name='artist'),
-    
-    url('login', views.login, name='login'),
-    
+    url(r'^$', views.start, name='starter'),
+    url(r'^index/$', views.start, name='index'),
+    url(r'^catalogue/$', views.catalogue, name='artist'),
+    url(r'^bugs/$', views.bugs, name='bugs'),
+    url(r'^features/$', views.features, name='features'),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^signup/$', views.signup, name='signup'),
+
     #url('signup', views.signup, name='signup')
 
 ]

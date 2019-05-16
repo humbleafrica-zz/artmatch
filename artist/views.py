@@ -1,7 +1,13 @@
 from django.views import generic
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response,  get_object_or_404, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Artist, GroupMember, Catalogue, Bug, Feature
+from django.utils import timezone #importing the timezone model
+from datetime import datetime, timedelta # import to filter new recipes
+from django.http import HttpResponseRedirect
+from django.http import JsonResponse
+from django.core.urlresolvers import reverse_lazy
+from django.contrib.auth.forms import UserCreationForm #import to use the builtin user creation form
 
 def index(request):
     artist = Artist.Catalogue.filter().order_by('Year')
@@ -13,5 +19,26 @@ def start(request):
 def catalogue(request):
     return render(request, 'artist/catalogue.html',{})
 
+def bugs(request):
+    return render(request, 'artist/bugs.html',{})
+
+def features(request):
+    return render(request, 'artist/features.html',{})
+
 def login(request):
     return render(request, 'artist/registration/login.html',{})
+    
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+    else:
+        form = UserCreationForm()
+    context ={
+        'form': form,
+        #'signup': 'signup',
+    }
+    
+    return render(request, 'artist/registration/signup.html', context)
