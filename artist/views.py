@@ -1,7 +1,7 @@
 from django.views import generic
 from django.shortcuts import render, render_to_response,  get_object_or_404, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Artist, Craft, Catalogue, Bug, Feature
+from .models import Artist, Catalogue, Bug, Feature, ArtForm
 from django.utils import timezone #importing the timezone model
 from datetime import datetime, timedelta # import to filter new recipes
 from django.http import HttpResponseRedirect
@@ -10,20 +10,44 @@ from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm #import to use the builtin user creation form
 
 def index(request):
-    return render(request, 'artist/index.html',{})
+    
+    context={
+        'index': 'active'
+    }
+    return render(request, 'artist/index.html', context)
 
 def start(request):
-    return render(request, 'artist/start.html',{})
+    
+    context={
+        'index': 'active'
+    }
+    return render(request, 'artist/start.html', context)
+
 
 def catalogue(request):
-    catalogue = Artist.Catalogue.filter().order_by('Year')
-    return render(request, 'artist/catalogue.html',{})
+    catalogues = Catalogue.objects.all()
+    
+    context={
+        'object_list': catalogues,
+        'catalogue': 'active'
+    }
+    return render(request, 'artist/catalogue.html',context)
 
-def bugs(request):
-    return render(request, 'artist/bugs.html',{})
+def bug(request):
+    bugs = Bug.objects.all()
 
-def features(request):
-    return render(request, 'artist/features.html',{})
+    context={
+        'bug': 'active'
+    }
+    return render(request, 'artist/bugs.html', context)
+
+def feature(request):
+    features = Feature.objects.all()
+    
+    context={
+        'feature': 'active'
+    }
+    return render(request, 'artist/features.html', context)
 
 def login(request):
     return render(request, 'artist/registration/login.html',{})
@@ -40,5 +64,4 @@ def signup(request):
         'form': form,
         #'signup': 'signup',
     }
-    
     return render(request, 'artist/registration/signup.html', context)

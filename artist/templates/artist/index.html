@@ -1,14 +1,5 @@
 {% extends 'artist/base.html' %}
 {% block title %} Art Match - AM {% endblock %}
 {% block content %} 
-{% if Catalogues %}
-
-{% for Catalogues in Catalogue %}
-    <div>
-        <p>Catalogues: {{ Artist.Catalogues }}</p>
-        <h2><a href="">{{ Catalogue.title }}</a></h2>
-        <p>{{ Catalogue.Year|linebreaksbr }}</p>
-    </div>
-{% endfor %}
-{% endif %}
+<h1>I am the home page</h1>
 {% endblock %}

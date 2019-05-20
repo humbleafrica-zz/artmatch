@@ -1,12 +1,8 @@
-{% extends 'artist/base.html' %} {% block body %} {% if Crafts %}
-{% block title %} Art Match - A Better View {% endblock %}
+{% extends 'artist/base.html' %} {% block body %} {% if Crafts %} {% block title %} Art Match - A Better View {% endblock %} {% for Catalogues in Catalogue %}
+<div class="container">
 
-{% for Catalogues in Catalogue %}
-    <div>
-        <p>Catalogues: {{ Artist.Catalogues }}</p>
-        <h2><a href="">{{ Catalogue.title }}</a></h2>
-        <p>{{ Catalogue.Year|linebreaksbr }}</p>
-    </div>
-{% endfor %}
-
-{% endif %} {% endblock %}
+    <h1>
+        {{ object_list }}
+    </h1>
+</div>
+{% endfor %} {% endif %} {% endblock %}
