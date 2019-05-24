@@ -50,7 +50,7 @@ def feature(request):
     return render(request, 'artist/features.html', context)
 
 def login(request):
-    return render(request, 'artist/registration/login.html',{})
+    return render(request, 'registration/login.html',{})
     
 def signup(request):
     if request.method == 'POST':
@@ -63,4 +63,4 @@ def signup(request):
     context ={
         'form': form,
     }
-    return render(request, '../signup.html', context)
+    return render(request, 'registration/signup.html', context)

@@ -14,11 +14,12 @@
   <form id="login" class='site-form' method="post" action="{{ 'signup' }}">
     <table>
       {% csrf_token %} {{ form.as_table }}
-      <div class="col text-right">
-        <input class=" btn btn-success " type="submit " value="Submit" />
-      </div>
-      <input type="hidden" name="next" value="{{ next }}" />
     </table>
+
+    <input type="hidden" name="next" value="{{ next }}" />
+    <div class="col text-right">
+      <button class=" btn btn-success " type="submit">Submit</button>
+    </div>
   </form>
 </div>
 
