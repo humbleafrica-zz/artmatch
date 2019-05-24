@@ -57,17 +57,27 @@
 </nav>
 
 <body>
-    {% block logo %}
-    <h1 class="startheader">
-        <div class="logo">
-            <img src="{% static '/static/artist/images/logo.png' %}" height="100" alt="Art || Match">
+    {% block content %} {% block login %} {% endblock %} {% endblock %}
+    <footer id="footer">
+        <div class="row col">
+            <div class="col">
+                tes
+            </div>
+            |
+            <div class="col">
+                test1
+            </div>
+            |
+            <div class="col">
+                test2
+            </div>
+            |
+            <div class="col">
+                test 3
+            </div>
         </div>
-        Share your gift </h1>
-    {% endblock %} {% block content %} {% block login %} {% endblock %} {% endblock %}
-    <footer class="footer">
-        <h1>I am your footer</h1>
+        Crafted Passionately by <i> <a href="">Humbleafrica</a> {% now 'Y' %}</i>
     </footer>
 </body>
-
 
 </html>

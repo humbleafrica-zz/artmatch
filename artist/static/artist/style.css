@@ -33,8 +33,9 @@ body {
     position: relative;
 }
 
-nav{
-  opacity: .9 !important;  
+nav {
+    opacity: .9 !important;
+    width: 100% !important;
 }
 
 form {
@@ -42,7 +43,7 @@ form {
     display: inline-block;
     background: white;
     border-radius: 5px;
-    padding: 5px;
+    padding: 2px;
 }
 
 input {
@@ -51,6 +52,15 @@ input {
     background: white;
     border-radius: 5px;
     padding: 5px;
+}
+
+#startheader {
+    margin: 250px auto;
+    padding: 20px;
+    background: white;
+    font-family: 'ONEDAY Bold', Arial, sans-serif;
+    position: relative;
+    opacity: .7;
 }
 
 .startheader {
@@ -65,10 +75,10 @@ input {
 
 .wrapper {
     background: light-purple;
-    min-height: calc(50vh - 70px);
     opacity: .8;
     border-radius: 5px;
     position: relative;
+    min-height: 100vh;
 }
 
 .register,
@@ -83,13 +93,20 @@ input {
 }
 
 .register {
-    margin: 90px auto 0;
+    margin: 190px auto 0;
 }
 
 .sign {
     margin: 10px auto;
 }
 
+#login {
+    margin: 250px auto;
+}
+
+#register {
+    margin: 250px auto;
+}
 
 .logo {
     margin: 80px auto 10px;
@@ -105,14 +122,15 @@ text {
     margin: 5px 5px;
 }
 
-.footer {
-    position: relative;
-    bottom: 0;
+#footer {
+    position: absolute;
+    bottom: 20;
     width: 100%;
     background: #343A40;
     color: #ffffff;
-    min-height: 70px;
+    height: auto;
     opacity: .9;
     border-top: 3px solid #000000;
     text-align: center;
+    padding: 10px;
 }

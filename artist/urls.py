@@ -7,7 +7,7 @@ app_name = 'artist'
 urlpatterns = [
     #two views poiting to the same view with different names
     url(r'^$', views.start, name='starter'),
-    url(r'^index/$', views.start, name='index'),
+    url(r'^index/$', views.index, name='index'),
     url(r'^catalogue/$', views.catalogue, name='catalogue'),
     url(r'^bugs/$', views.bug, name='bugs'),
     url(r'^features/$', views.feature, name='features'),

@@ -62,6 +62,5 @@ def signup(request):
         form = UserCreationForm()
     context ={
         'form': form,
-        #'signup': 'signup',
     }
-    return render(request, 'artist/registration/signup.html', context)
+    return render(request, '../signup.html', context)
