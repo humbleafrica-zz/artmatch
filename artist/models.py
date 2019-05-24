@@ -4,6 +4,10 @@ from django.conf import settings
 from django.utils import timezone
 from django.core.urlresolvers import reverse
 
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 """Artist"""
 class Artist(models.Model):
     #craft choices
@@ -25,7 +29,7 @@ class Artist(models.Model):
     mos= "Mosaic"
     scu= "Sculpture"
     vgr= "Videographer"
-    
+    #list to choose from
     CRAFT_TYPE_CHOICES=(
         (par, "Painting"),
         (mus, "Music"),
@@ -47,25 +51,29 @@ class Artist(models.Model):
         (vgr, "Videographer"),
     )
     
+    #artist field names
     fname = models.CharField(max_length=50)
     sname = models.CharField(max_length=50)
-    stagename = models.CharField(max_length=50)
+    stagename = models.OneToOneField(User, on_delete=models.CASCADE)
+    birthdate = models.DateField(null=True, blank=True)
     craft = models.CharField("Craft", max_length = 20, choices = CRAFT_TYPE_CHOICES)
     speciality = models.CharField(max_length=30, blank=True)
     
-
-    #def voice_concern(self):
-    #    self.voted = True,
-    #    self.voted = False
-        
+    #how to show in admin console   
     def __unicode__(self):
         self.save()
         return self.stagename
-    
+        
+    #how to show whether singular or multiple
     class Meta:
         verbose_name = "artist"
         verbose_name_plural = "artists"
-        
+
+@receiver(post_save, sender=Artist)
+def create_or_update_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Artist.objects.create(user=instance)
+    instance.stagename.save()
     
 """Art Catalogue/ Albums"""
 class Catalogue(models.Model):
