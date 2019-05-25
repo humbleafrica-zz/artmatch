@@ -48,35 +48,27 @@ class Artist(models.Model):
         (vgr, "Videographer"),
     )
     
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
-    fname = models.CharField(max_length=50)
-    sname = models.CharField(max_length=50)
     stagename = models.CharField(max_length=50)
     craft = models.CharField("Craft", max_length = 20, choices = CRAFT_TYPE_CHOICES)
     speciality = models.CharField(max_length=30, blank=True)
     
-
-    #def voice_concern(self):
-    #    self.voted = True,
-    #    self.voted = False
-        
-    def __unicode__(self):
+    def __str__(self):
         return self.stagename
     
-    class Meta:
+    #class Meta:
         verbose_name = "artist"
         verbose_name_plural = "artists"
-        
     
 """Art Catalogue/ Albums"""
 class Catalogue(models.Model):
-    title = models.CharField(max_length=50)
-    year = models.DateField(blank=True, null=True)
     artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
-    cover_Image = models.ImageField(upload_to='images/')
+    title = models.CharField(max_length=50)
+    release_date  = models.DateField(blank=True, null=True)
+    num_stars = models.IntegerField()
+    #cover_Image = models.ImageField(upload_to='images/')
     
-    def __unicode__(self):
+    def __str__(self):
         return self.title
         
 class Meta:
@@ -93,7 +85,7 @@ class ArtForm(models.Model):
     file = models.FileField(upload_to='artForm/')
     catalogue = models.ForeignKey(Catalogue, on_delete=models.CASCADE)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.title
     
     class Meta:
@@ -108,7 +100,7 @@ class Bug(models.Model):
     When = models.DateField(blank=True, null=True)
     How = models.CharField(max_length=2500)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.What
     
     class Meta:
@@ -122,7 +114,7 @@ class Feature(models.Model):
     When = models.DateField(blank=True, null=True)
     How = models.CharField(max_length=2500)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.What
     
     class Meta:
