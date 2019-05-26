@@ -9,8 +9,9 @@ from django.http import JsonResponse
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm #import to use the builtin user creation form
 
+
+#view functions
 def index(request):
-    
     context={
         'index': 'active'
     }
@@ -22,6 +23,13 @@ def start(request):
         'index': 'active'
     }
     return render(request, 'artist/start.html', context)
+    
+def profile(request):
+    
+    context={
+        'index': 'active'
+    }
+    return render(request, 'artist/profile.html', context)
 
 def catalogue(request):
     catalogues = Catalogue.objects.all()

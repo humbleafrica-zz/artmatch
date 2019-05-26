@@ -21,8 +21,8 @@ from artist import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('signup', views.signup, name='signup'),
-    url('login', views.login, name='login'),
+    url('signup/', views.signup, name='signup'),
+    url('login/', views.login, name='login'),
     url('', include('artist.urls')),
 
 ]
