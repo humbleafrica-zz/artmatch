@@ -50,12 +50,20 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
+            {% if user.is_authenticated %}
+            <li class="nav-item nav-link"> <i class="far fa-user"> </i> {{ user }}</li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'profile' %}"><i class="fas fa-sign-in-alt"></i> Profile </a>
+                <a class="nav-link" href="{% url 'logout' %}"><i class="fas fa-sign-in-alt"></i> Sign Out </a>
+            </li>
+            {% else %}
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Sign In </a>
             </li>
             <li class="nav-item {{ joinin }}">
                 <a class="nav-link" href="{% url 'signup' %}"><i class="fas fa-user-plus"></i> Join In </a>
             </li>
+            {% endif %}
         </ul>
 </nav>
 

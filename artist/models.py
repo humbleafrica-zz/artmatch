@@ -85,7 +85,7 @@ class ArtForm(models.Model):
     cover_Image = models.ImageField(upload_to='images/')
     file = models.FileField(upload_to='artForm/')
     catalogue = models.ForeignKey(Catalogue, on_delete=models.CASCADE)
-    artist = models.ForeignKey(User, on_delete=models.CASCADE)
+    artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.title

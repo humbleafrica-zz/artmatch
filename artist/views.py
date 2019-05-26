@@ -7,8 +7,9 @@ from datetime import datetime, timedelta # import to filter new recipes
 from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 from django.core.urlresolvers import reverse_lazy
-from django.contrib.auth.forms import UserCreationForm #import to use the builtin user creation form
 from django.contrib import messages
+from . forms import UserSignUpForm #custome signup form
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -25,7 +26,8 @@ def start(request):
         'index': 'active'
     }
     return render(request, 'artist/start.html', context)
-
+    
+@login_required
 def profile(request):
     #qs = Artist.objects.filter(pk=pk)
     context={
@@ -42,6 +44,7 @@ def profile(request):
     }
     return render(request, 'artist/profile.html', context)
 """
+@login_required
 def catalogue(request):
     qs = Catalogue.objects.all()
     
@@ -51,6 +54,7 @@ def catalogue(request):
     }
     return render(request, 'artist/catalogue.html',context)
 
+@login_required
 def bug(request):
     bugs = Bug.objects.all()
 
@@ -59,6 +63,7 @@ def bug(request):
     }
     return render(request, 'artist/bugs.html', context)
 
+@login_required
 def feature(request):
     features = Feature.objects.all()
     
@@ -74,17 +79,37 @@ def about(request):
     return render(request, 'artist/about.html', context)
     
 def login(request):
-    return render(request, 'registration/login.html',{})
-    
-def signup(request):
+    context={
+        'about': 'active'
+    }
+    return render(request, 'registration/login.html', context)
+
+def logout(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserSignUpForm(request.POST)
         if form.is_valid():
             username = form.cleaned_date.get('username')
-            messages.success(request, 'Account has been created for {username}!')
+            messages.success(request, 'Account created for {username}, please login')
+            form.save()
         return redirect('login')
     else:
-        form = UserCreationForm()
+        form = UserSignUpForm()
+    context ={
+        'form': form,
+    }
+    return render(request, 'registration/logout.html')
+  
+  
+def signup(request):
+    if request.method == 'POST':
+        form = UserSignUpForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_date.get('username')
+            messages.success(request, 'Account created for {username}, please login')
+            form.save()
+        return redirect('login')
+    else:
+        form = UserSignUpForm()
     context ={
         'form': form,
     }
