@@ -1,0 +1,50 @@
+{% extends 'artist/base.html' %} {% block title %} Meet the | Artist {% endblock %} {% block content %}
+
+
+
+<!-- About Section Start -->
+<section id="about" class="profile section-padding">
+    <div class="container">
+        <div class="col">
+            <div class="row">
+                <div class="text-center">
+                    <img class="profile-img" src="profile_pics/profile.jpg" alt="profile pic">
+                </div>
+            </div>
+            <div class="row">
+                <div class="">
+                    <div class="col about">
+                        <p>
+                            Est diam venenatis arcu lacus ad. Duis quis eros. Cursus et rutrum eleifend sollicitudin lacinia justo id turpis. Nec convallis integer. Odio eget duis. Nulla aenean et. Blandit varius sollicitudin. Pellentesque leo primis neque urna magnis. Elit ut sollicitudin.
+                            Et est a nam dolores eget itaque sagittis et parturient duis est eleifend sociis rutrum odio viverra integer.
+                        </p>
+                    </div>
+                    <div class="about-profile">
+                        <div class="row artist-details">
+                            <div class="col"><span class="pro-title"> Artist </span> <span class="pro-detail">Tom Saulnier</span></div>
+                            <div class="col"><span class="pro-title"> Craft </span> <span class="pro-detail">25 Years</span></div>
+                            <div class="col"><span class="pro-title"> Speciality </span> <span class="pro-detail">4 Years</span></div>
+                        </div>
+                    </div>
+                    <a href="">
+            <input class="btn btn-landing" type="button" value="Let's Work">
+        </a>
+                    <div class="works">
+                        <h2>My Works</h2>
+                        <div class="row works-data">
+                            {% for catalogue in catalogues%}
+                            <div class="col work-data">
+                                1
+                            </div>
+                            {%endfor%}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->
+
+{% endblock %}

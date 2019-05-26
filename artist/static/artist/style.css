@@ -154,6 +154,22 @@ text {
     font-weight: bold;
 }
 
+.profile {
+    border-radius: 5px;
+    border: 2px solid #8EBC77;
+    background-color: #ffffff;
+    opacity: .9;
+    color: #000000;
+}
+
+.profile-img {
+    margin: 5px auto;
+}
+
+.pro-title {
+    font-weight: bold;
+}
+
 #footer {
     position: absolute;
     bottom: 20;

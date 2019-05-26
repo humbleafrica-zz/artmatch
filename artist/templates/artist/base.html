@@ -59,24 +59,34 @@
 <body>
     {% block content %} {% block login %} {% endblock %} {% endblock %}
     <footer id="footer">
-        <div class="row col">
+        <div class="row">
             <div class="col">
-                tes
-            </div>
-            |
-            <div class="col">
-                test1
-            </div>
-            |
-            <div class="col">
-                test2
-            </div>
-            |
-            <div class="col">
-                test 3
+                <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
+                    <div class="row social-icon">
+                        <div class="col">
+                            <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        |
+                        <div class="col">
+                            <a class="twitter" href="#"><i class="fab fa-twitter"></i></i></a>
+                        </div>
+                        |
+                        <div class="col">
+                            <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        |
+                        <div class="col">
+                            <a class="instagram" href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        |
+                        <div class="col">
+                            <a class="instagram" href="#"><i class="fab fa-google"></i></a>
+                        </div>
+                    </div>
+                    Crafted Passionately by <i> <a href="">Humbleafrica</a> {% now 'Y' %}</i>
+                </div>
             </div>
         </div>
-        Crafted Passionately by <i> <a href="">Humbleafrica</a> {% now 'Y' %}</i>
     </footer>
 </body>
 
