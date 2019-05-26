@@ -22,6 +22,10 @@ a:link {
     font-style: normal;
 }
 
+nav {
+    opacity: .9 !important;
+    width: 100% !important;
+}
 
 body {
     background: white url('images/match.png')no-repeat center center fixed;
@@ -33,10 +37,7 @@ body {
     position: relative;
 }
 
-nav {
-    opacity: .9 !important;
-    width: 100% !important;
-}
+/*form styling */
 
 form {
     margin: 120px auto;
@@ -122,14 +123,31 @@ text {
     margin: 5px 5px;
 }
 
-/* ################  ####################*/
+/*- LANDING PAGE STYLING -*/
 
-.errors {
-    color: red;
-    background-color: white;
-    padding: 5px;
-    margin: 2px;
+.landing {
+    background-color: #ffffff;
+    margin: 200px auto 10px;
+    height: 100%;
+    border-radius: 5px;
+}
 
+.btn-landing {
+    border-radius: 50px;
+    border: 2px solid #f1f1f1;
+    background-color: #031101;
+    opacity: .9;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btn-landing:hover {
+    border-radius: 5px;
+    border: 2px solid #8EBC77;
+    background-color: #ffffff;
+    opacity: .9;
+    color: #000000;
+    font-weight: bold;
 }
 
 #footer {
