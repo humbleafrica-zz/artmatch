@@ -8,6 +8,8 @@ from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm #import to use the builtin user creation form
+from django.contrib import messages
+
 
 
 #view functions
@@ -65,6 +67,12 @@ def feature(request):
     }
     return render(request, 'artist/features.html', context)
 
+def about(request):
+    context={
+        'about': 'active'
+    }
+    return render(request, 'artist/about.html', context)
+    
 def login(request):
     return render(request, 'registration/login.html',{})
     
@@ -72,8 +80,9 @@ def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
-        return redirect('/')
+            username = form.cleaned_date.get('username')
+            messages.success(request, 'Account has been created for {username}!')
+        return redirect('login')
     else:
         form = UserCreationForm()
     context ={

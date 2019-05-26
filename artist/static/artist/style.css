@@ -42,7 +42,7 @@ body {
 form {
     margin: 50% 50%;
     display: inline-block;
-    background: #F9DECB;
+    background: #f1f1f1;
     border-radius: 5px;
     padding: 2px;
 }
@@ -84,7 +84,7 @@ input {
 
 .register,
 .sign {
-    background: white;
+    background: #ffffff;
     opacity: .8;
     border-radius: 5px;
     padding: 2px;
@@ -178,6 +178,7 @@ text {
 }
 
 .cat {
+    margin: 10px auto;
     border-radius: 5px;
     border: 2px solid #339AF0;
     background-color: #ffffff;
@@ -186,6 +187,7 @@ text {
 }
 
 .bug {
+    margin: 10px auto;
     border-radius: 5px;
     border: 2px solid #662B2A;
     background-color: #ffffff;
@@ -194,6 +196,7 @@ text {
 }
 
 .feature {
+    margin: 10px auto;
     border-radius: 5px;
     border: 2px solid #98C878;
     background-color: #ffffff;

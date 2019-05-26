@@ -3,13 +3,15 @@
     <div class="cat container">
         <h3><i class="fas fa-database"></i> Catalogues | Albums </h3>
         <div class="row">
-            {{ qs }} {% for instance in qs%}
+            {% for instance in qs%}
             <div class="col cat-detail">
                 <div class="instanceimg">
                     <img class="profile-img" src="{{ instance.cover_Image.url }}" alt="profile pic" />
-
                 </div>
+                <p>{{ instance.artist }}</p>
                 <p>{{ instance.title }}</p>
+                <p>{{ instance.release_date }}</p>
+                <p>{{ instance.num_stars }}</p>
             </div>
             {% endfor %}
         </div>

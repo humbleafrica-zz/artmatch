@@ -45,6 +45,9 @@
             <li class="nav-item {{ feature }}">
                 <a class="nav-link" href="{% url 'artist:feature' %}"><i class="fas fa-lightbulb"></i> Features </a>
             </li>
+            <li class="nav-item {{ about }}">
+                <a class="nav-link" href="{% url 'artist:about' %}"><i class="fas fa-people-carry"></i> About </a>
+            </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -58,7 +61,11 @@
 
 <body>
     <div class="container">
-        {% block content %} {% block login %} {% endblock %} {% endblock %}
+        {% if messages %} {% for message in messages %}
+        <div class="alert alert-{{message.tag}}">
+            {{ message }}
+        </div>
+        {% endfor%} {% endif%} {% block content %} {% block login %} {% endblock %} {% endblock %}
     </div>
 
     <footer id="footer">
