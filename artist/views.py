@@ -23,7 +23,6 @@ def start(request):
     }
     return render(request, 'artist/start.html', context)
 
-
 def catalogue(request):
     catalogues = Catalogue.objects.all()
     
