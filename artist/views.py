@@ -41,10 +41,10 @@ def profile(request):
     return render(request, 'artist/profile.html', context)
 """
 def catalogue(request):
-    catalogues = Catalogue.objects.all()
+    qs = Catalogue.objects.all()
     
     context={
-        'object_list': catalogues,
+        'qs': qs,
         'catalogue': 'active'
     }
     return render(request, 'artist/catalogue.html',context)

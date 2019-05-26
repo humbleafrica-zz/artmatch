@@ -67,7 +67,7 @@ class Catalogue(models.Model):
     title = models.CharField(max_length=50)
     release_date  = models.DateField(blank=True, null=True)
     num_stars = models.IntegerField()
-    #cover_Image = models.ImageField(upload_to='images/')
+    cover_Image = models.ImageField(upload_to='images/')
     
     def __str__(self):
         return self.title

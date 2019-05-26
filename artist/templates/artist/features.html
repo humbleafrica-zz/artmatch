@@ -1,4 +1,15 @@
 {% extends 'artist/base.html' %} {% block title %} Art Match - Great Idea {% endblock %}{% block content %}
-<div class="wrapper"></div>
+<div class="wrapper">
+    <div class="feature container">
+        <h3><i class="fas fa-lightbulb"></i> Features | Ideas | We Want </h3>
+        <div class="row">
+            {% for instance in qs%}
+            <div class="col feature-detail">
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}

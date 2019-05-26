@@ -40,7 +40,7 @@ body {
 /*form styling */
 
 form {
-    margin: 120px auto;
+    margin: 50% 50%;
     display: inline-block;
     background: #F9DECB;
     border-radius: 5px;
@@ -56,7 +56,7 @@ input {
 }
 
 #startheader {
-    margin: 250px auto;
+    margin: 50% 50%;
     padding: 20px;
     background: white;
     font-family: 'ONEDAY Bold', Arial, sans-serif;
