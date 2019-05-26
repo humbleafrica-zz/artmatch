@@ -42,7 +42,7 @@ body {
 form {
     margin: 120px auto;
     display: inline-block;
-    background: white;
+    background: #F9DECB;
     border-radius: 5px;
     padding: 2px;
 }
@@ -91,6 +91,7 @@ input {
     position: relative;
     text-shadow: 2px 1px red;
     max-width: 35%;
+    border: 2px solid #F9DECB;
 }
 
 .register {
@@ -102,11 +103,14 @@ input {
 }
 
 #login {
-    margin: 280px auto;
+    margin: 240px auto;
+    border: 2px solid #D0D4E4;
 }
 
 #register {
-    margin: 200px auto;
+    margin: 180px auto;
+    border: 2px solid #D0D4E4;
+
 }
 
 .logo {
