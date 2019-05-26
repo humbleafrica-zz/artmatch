@@ -1,4 +1,16 @@
 {% extends 'artist/base.html' %} {% block title %} Art Match - Art Collections {% endblock %}{% block content %}
-<div class="wrapper"></div>
+<div class="wrapper">
+    <div class="cat container">
+        <h3><i class="fas fa-database"></i> Catalogues | Albums </h3>
+        <div class="row">
+            {% for instance in qs%}
+            <div class="col cat-detail">
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
 
 {% endblock %}

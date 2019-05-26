@@ -11,7 +11,7 @@
 {% endif %}
 
 <div class="wrapper">
-  <form id="login" class='site-form' method="post" action="{{ 'signup' }}">
+  <form id="login" class='site-form' method="post" action="{% url 'signup' %}">
     <h1>Sign Up</h1>
     <table>
       {% csrf_token %} {{ form.as_table }}

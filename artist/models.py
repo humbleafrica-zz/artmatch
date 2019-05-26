@@ -49,6 +49,7 @@ class Artist(models.Model):
     )
     
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    about = models.TextField()
     stagename = models.CharField(max_length=50)
     craft = models.CharField("Craft", max_length = 20, choices = CRAFT_TYPE_CHOICES)
     speciality = models.CharField(max_length=30, blank=True)
@@ -84,6 +85,7 @@ class ArtForm(models.Model):
     cover_Image = models.ImageField(upload_to='images/')
     file = models.FileField(upload_to='artForm/')
     catalogue = models.ForeignKey(Catalogue, on_delete=models.CASCADE)
+    artist = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.title

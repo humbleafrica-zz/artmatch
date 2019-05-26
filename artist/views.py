@@ -23,14 +23,23 @@ def start(request):
         'index': 'active'
     }
     return render(request, 'artist/start.html', context)
-    
+
 def profile(request):
-    
+    #qs = Artist.objects.filter(pk=pk)
     context={
+       # 'qs': qs,
         'index': 'active'
     }
     return render(request, 'artist/profile.html', context)
 
+"""def profile(request, pk):
+    qs = Artist.objects.filter(pk=pk)
+    context={
+        'qs': qs,
+        'index': 'active'
+    }
+    return render(request, 'artist/profile.html', context)
+"""
 def catalogue(request):
     catalogues = Catalogue.objects.all()
     

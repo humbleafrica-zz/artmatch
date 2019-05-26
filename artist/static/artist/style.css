@@ -164,10 +164,41 @@ text {
 
 .profile-img {
     margin: 5px auto;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #8EBC77;
+}
+
+#profile-img {
+    margin: 10px auto
 }
 
 .pro-title {
     font-weight: bold;
+}
+
+.cat {
+    border-radius: 5px;
+    border: 2px solid #339AF0;
+    background-color: #ffffff;
+    opacity: .9;
+    color: #000000;
+}
+
+.bug {
+    border-radius: 5px;
+    border: 2px solid #662B2A;
+    background-color: #ffffff;
+    opacity: .9;
+    color: #000000;
+}
+
+.feature {
+    border-radius: 5px;
+    border: 2px solid #98C878;
+    background-color: #ffffff;
+    opacity: .9;
+    color: #000000;
 }
 
 #footer {

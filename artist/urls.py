@@ -10,5 +10,5 @@ urlpatterns = [
     url(r'^bug/$', views.bug, name='bug'),
     url(r'^feature/$', views.feature, name='feature'),
     url(r'^profile/$', views.profile, name='profile'),
-    #url('login', views.login, name='login'),
+    #url(r'^profile/(?P<pk>[0-9]+)$', views.profile, name='profile'),
 ]
