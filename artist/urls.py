@@ -9,7 +9,6 @@ urlpatterns = [
     url(r'^$', artist_views.start, name='start'),
     url(r'^bug/$', artist_views.bug, name='bug'),
     url(r'^feature/$', artist_views.feature, name='feature'),
-    url(r'^profile/$', artist_views.profile, name='profile'),
     url(r'^about/$', artist_views.about, name='about'),
     #url(r'^profile/(?P<pk>[0-9]+)$', artist_views.profile, name='profile'),
 ]

@@ -82,7 +82,7 @@ def login(request):
     context={
         'about': 'active'
     }
-    return render(request, 'registration/login.html', context)
+    return render(request, 'artist/catalogue.html', context)
 
 def logout(request):
     if request.method == 'POST':

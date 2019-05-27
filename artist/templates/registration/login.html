@@ -11,11 +11,11 @@
 {% endif %}
 
 <div class="wrapper">
-  <form id="login" method="post" action="{% url 'login' %}">
+  <form id="login" method="POST" action="{% url 'login' %}">
     <fieldset class="form-group">
       <legend class="border-bottom mb-4"> Sign In </legend>
     </fieldset>
-    {% csrf_token %} {{ form.as_table }}
+    {% csrf_token %}
     <div class="col">
       Username <input type="text" name="username" />
     </div>
