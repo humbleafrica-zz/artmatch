@@ -214,6 +214,13 @@ text {
     color: #000000;
 }
 
+.about,
+.about-profile,
+.actions,
+.artist-details {
+    margin: 5px auto;
+}
+
 #footer {
     position: absolute;
     bottom: 20;

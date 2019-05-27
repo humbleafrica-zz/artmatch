@@ -11,15 +11,14 @@ from django.contrib import messages
 from . forms import UserSignUpForm #custome signup form
 from django.contrib.auth.decorators import login_required
 
-
-
-#view functions
+#INDEX VIEW
 def index(request):
     context={
         'index': 'active'
     }
     return render(request, 'artist/index.html', context)
 
+#START VIEW
 def start(request):
     
     context={
@@ -27,23 +26,7 @@ def start(request):
     }
     return render(request, 'artist/start.html', context)
     
-@login_required
-def profile(request):
-    #qs = Artist.objects.filter(pk=pk)
-    context={
-       # 'qs': qs,
-        'index': 'active'
-    }
-    return render(request, 'artist/profile.html', context)
-
-"""def profile(request, pk):
-    qs = Artist.objects.filter(pk=pk)
-    context={
-        'qs': qs,
-        'index': 'active'
-    }
-    return render(request, 'artist/profile.html', context)
-"""
+#CATALOGUE VIEW
 @login_required
 def catalogue(request):
     qs = Catalogue.objects.all()
@@ -54,6 +37,7 @@ def catalogue(request):
     }
     return render(request, 'artist/catalogue.html',context)
 
+#BUG VIEW
 @login_required
 def bug(request):
     bugs = Bug.objects.all()
@@ -62,7 +46,8 @@ def bug(request):
         'bug': 'active'
     }
     return render(request, 'artist/bugs.html', context)
-
+    
+#FEATURE VIEW
 @login_required
 def feature(request):
     features = Feature.objects.all()
@@ -72,45 +57,10 @@ def feature(request):
     }
     return render(request, 'artist/features.html', context)
 
+#ABOUT VIEW
 def about(request):
     context={
         'about': 'active'
     }
     return render(request, 'artist/about.html', context)
     
-def login(request):
-    context={
-        'about': 'active'
-    }
-    return render(request, 'artist/catalogue.html', context)
-
-def logout(request):
-    if request.method == 'POST':
-        form = UserSignUpForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_date.get('username')
-            messages.success(request, 'Account created for {username}, please login')
-            form.save()
-        return redirect('login')
-    else:
-        form = UserSignUpForm()
-    context ={
-        'form': form,
-    }
-    return render(request, 'registration/logout.html')
-  
-  
-def signup(request):
-    if request.method == 'POST':
-        form = UserSignUpForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_date.get('username')
-            messages.success(request, 'Account created for {username}, please login')
-            form.save()
-        return redirect('login')
-    else:
-        form = UserSignUpForm()
-    context ={
-        'form': form,
-    }
-    return render(request, 'registration/signup.html', context)
